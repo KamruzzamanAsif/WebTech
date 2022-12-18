@@ -1,0 +1,16 @@
+/* h1{
+    color: red;
+} */
+#cse105 {
+    color: red;
+} /* priority besi tai id kaj korbe */
+
+.odd {
+    color: green;
+}
+.even {
+    color: pink;
+}
+p.firstParagraph {
+    color: blue;
+}
