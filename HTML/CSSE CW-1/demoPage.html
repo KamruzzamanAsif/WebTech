@@ -3,10 +3,19 @@
   <head>
     <title>Demo Page</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+      }
       div.top-div {
         border: 2px solid darkblue;
-        background-color: rgb(78, 78, 240);
-        height: 100px;
+        background-color: rgb(21, 21, 139);
+        height: 15%;
         width: 100%;
         align-items: center;
         display: flex;
@@ -17,8 +26,8 @@
         float: left;
         border: 2px solid darkblue;
         background-color: rgb(192, 199, 201);
-        height: 400px;
-        width: 28%;
+        height: 75%;
+        width: 30%;
         align-items: center;
         justify-content: center;
       }
@@ -26,9 +35,9 @@
       div.middle-right {
         float: left;
         border: 2px solid darkblue;
-        background-color: rgb(240, 219, 185);
-        height: 400px;
-        width: 71.33%;
+        background-color: rgb(216, 180, 122);
+        height: 75%;
+        width: 70%;
         align-items: center;
         display: flex;
         justify-content: center;
@@ -45,8 +54,8 @@
 
       div.bottom {
         border: 2px solid darkblue;
-        background-color: gray;
-        height: 100px;
+        background-color: rgb(114, 105, 105); 
+        height: 10%;
         width: 100%;
         align-items: center;
         display: flex;
@@ -56,6 +65,10 @@
       p {
         text-align: center;
         color: white;
+      }
+      p.middle-text {
+        text-align: center;
+        color: black;
       }
       p.bottom-text {
         text-align: center;
@@ -74,7 +87,17 @@
       <div class="left-part"><p>History</p></div>
       <div class="left-part"><p>Acheivements</p></div>
     </div>
-    <div class="middle-right"></div>
+    <div class="middle-right"><p class="middle-text">
+      Institute of Information Technology (IIT), University of Dhaka started its 
+      journey in June 2001 to create efficient manpower in information technology.
+      IIT currently offers Bachelor of Science in Software Engineering (BSSE), 
+      Master of Science in Software Engineering (MSSE), Master in Information 
+      Technology (MIT) and Post Graduate Diploma in Information Technology (PGDIT).
+      Apart from its regular activities, it also produces state-of-the-art researches
+       and those are published in world class journals and conferences.
+      
+      IIT has a silent ambience and is adjacent to the Dhaka University Science Library. The four-storied red ceramic IIT building contains six software laboratories, one seminar library and two large classrooms. The laboratories and classrooms are air-conditioned and equipped with multimedia, document camera system and Internet facilities.
+      </p></div>
 
     <div class="bottom"><p class="bottom-text">&copy;BSSE-1217</p></div>
   </body>
