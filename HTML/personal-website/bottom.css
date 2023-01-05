@@ -1,0 +1,19 @@
+#bottom-div{
+    background-color: gainsboro;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+p.bottom-text {
+    text-align: center;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    text-shadow: 2px 2px 5px gray;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 15px;
+}
+

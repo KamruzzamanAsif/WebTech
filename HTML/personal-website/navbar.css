@@ -37,3 +37,10 @@
     text-shadow: 2px 2px 5px skyblue;
     font-variant: small-caps;
 }
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}

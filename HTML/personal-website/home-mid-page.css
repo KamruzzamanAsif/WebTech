@@ -1,0 +1,22 @@
+#mid-page-div{
+    background-color: rgb(243, 229, 217);
+    height: 80%;
+    width: 100%;
+}
+
+#left-div{
+    padding-top: 5%;
+}
+
+#right-div{
+    padding-top: 5%;
+    padding-right: 2%;
+}
+
+#home-mid-page-image{
+    height: 100%;
+    width: 50%;
+    float: right;
+    image-rendering: auto !important;
+    border-image-outset: 1px solid;
+}
