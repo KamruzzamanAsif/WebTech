@@ -1,4 +1,39 @@
 #navigation-bar{
-    background-color: bisque;
+    background-color: peachpuff;
+    height: 10%;
+    width: 100%;
+    text-decoration-color: black;
 }
 
+#navigation-container{
+    height: 100%;
+    width: 100%;
+}
+
+#navigation-header{
+    height: 100%;
+    width: 15%;
+}
+
+#nav-logo{
+    height: 100%;
+    width: 35%;
+}
+
+#nav-text{
+    text-align: center;
+    color: Black;
+    font-family: "Times New Roman", Times, serif;
+    text-shadow: 2px 2px 5px green;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 15px;
+}
+
+#nav-brand-text{
+    text-align: center;
+    color: Black;
+    font-family: "Times New Roman", Times, serif;
+    text-shadow: 2px 2px 5px skyblue;
+    font-variant: small-caps;
+}
