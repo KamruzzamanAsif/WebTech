@@ -1,0 +1,36 @@
+#mid-page-div{
+    background-color: rgb(243, 229, 217);
+    height: 80%;
+    width: 100%;
+}
+
+.header-2{
+    position: relative;
+    z-index: 10;
+    display: block;
+    color: hsla(0, 14%, 20%, 0.95);
+    font-size: 2em;
+    font-weight: 600;
+    padding-left: 5%;
+}
+
+#hobby-list{
+    position: relative;
+    z-index: 10;
+    display: block;
+    color: hsla(0, 14%, 20%, 0.95);
+    font-size: 1.5em;
+    font-weight: 400;
+    padding-left: 10%;
+    align-items: justify;
+    text-align: justify;
+}
+
+li {
+	margin: 0;
+	padding: 2% ;
+	list-style: none;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 40px;
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home</title>
+    <title>Education</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -12,6 +12,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="award&scholarship-mid-page.css" />
+    <link rel="stylesheet" href="bottom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style>
       * {
         box-sizing: border-box;
@@ -20,6 +26,8 @@
       html {
         margin: 0 auto;
         padding: 0;
+        height: 100%;
+        width: 100%;
       }
     </style>
   </head>
@@ -37,15 +45,15 @@
             alt="asif's image"
           />
         </div>
-        <ul class="nav navbar-nav float-left">
-          <li>
-            <a href="home-page.html"> <p id="nav-text">Home</p> </a>
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#"> <p id="nav-text">Home</p> </a>
           </li>
           <li>
             <a href="education-page.html"> <p id="nav-text">Education</p> </a>
           </li>
-          <li class="active">
-            <a href="#">
+          <li>
+            <a href="award&scholarship-page.html">
               <p id="nav-text">Awards & Scholarships</p>
             </a>
           </li>
@@ -53,7 +61,134 @@
             <a href="hobby-page.html"> <p id="nav-text">Hobbies</p> </a>
           </li>
         </ul>
+
+        <div style="float: right; text-align: center">
+          <ul class="nav navbar-nav">
+            <li>
+              <a
+                href="https://www.facebook.com/kamruzzaman.asif.35/"
+                target="_blank"
+              >
+                <i
+                  class="fa fa-facebook-square fa-2x"
+                  style="color: #3b5998; font-size: 30px"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/KamruzzamanAsif" target="_blank">
+                <i
+                  class="fa fa-github fa-2x"
+                  style="color: #333333; font-size: 30px"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/kamruzzaman-asif-67574b225"
+                target="_blank"
+              >
+                <i
+                  class="fa fa-linkedin-square fa-2x"
+                  style="color: #0082ca; font-size: 30px"
+                ></i
+              ></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
+
+    <div id="mid-page-div" class="container-fluid">
+      <div class="row">
+        <div id="left-div" class="col-lg-6">
+          <h2 class="header-2" style="padding-left: 10%; padding-top: 8%">
+            My acheivements
+          </h2>
+          <ul id="achivement-list">
+            <li>Government Scholarship</li>
+            <li>Best student award in Half Centenary Jubilee of School</li>
+            <li>Perfect attendance certificate</li>
+            <li>Regional Cricket championship</li>
+          </ul>
+        </div>
+        <div id="right-div" class="col-lg-6">
+          <h2 class="header-2">My Institutions</h2>
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li
+                data-target="#myCarousel"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div id="inner-carousel-div" class="carousel-inner">
+              <div class="item active institute-image">
+                <img
+                  class="carousel-image responsive rounded my-image"
+                  src="images/jubilee-school.jpeg"
+                  alt="jubilee-school"
+                />
+                <div class="carousel-caption">
+                  <h3 class="header-3">K.L. Jubilee School & College</h3>
+                  <p class="picture">Was so much fun!</p>
+                </div>
+              </div>
+
+              <div class="item institute-image">
+                <img
+                  class="carousel-image responsive rounded my-image"
+                  src="images/_ndc.jpg"
+                  alt="ndc"
+                />
+                <div class="carousel-caption">
+                  <h3 class="header-3">Notre Dame College</h3>
+                  <p class="picture">Was so much fun!</p>
+                </div>
+              </div>
+
+              <div class="item institute-image">
+                <img
+                  class="carousel-image responsive rounded my-image"
+                  src="images/_iit.jpg"
+                  alt="iit du"
+                />
+                <div class="carousel-caption">
+                  <h3 class="header-3">IIT,DU</h3>
+                  <p class="picture"></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a
+              class="left carousel-control"
+              href="#myCarousel"
+              data-slide="prev"
+            >
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="right carousel-control"
+              href="#myCarousel"
+              data-slide="next"
+            >
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="bottom-div" class="container-fluid">
+      <p class="bottom-text">&copy;Kamruzzaman Asif</p>
+    </div>
   </body>
 </html>
