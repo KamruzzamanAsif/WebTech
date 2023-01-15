@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <div id="myDiv">
+      <p id="p1">Hello, this is para 1.</p>
+      <p id="p2">Hello, this is para 2.</p>
+
+      <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+      </ul>
+    </div>
+
+    <script>
+      //   let paras = document.getElementsByTagName("p");
+      //   console.log(paras);
+      let myDiv = document.getElementById("myDiv");
+      //   console.log(myDiv.parentElement);
+      //   console.log(myDiv.children);
+      //   console.log(myDiv.childNodes);
+
+      //   console.log(myDiv.firstChild);
+      //   console.log(myDiv.firstElementChild);
+
+      let childrens = myDiv.children;
+      console.log(childrens);
+      for (let i = 0; i < childrens.length; i++) {
+        console.log(childrens[i].innerHTML);
+      }
+
+      let uchildrens = childrens[2].children;
+      console.log(uchildrens);
+      console.log(uchildrens.length);
+      console.log(uchildrens[1].previousElementSibling.innerHTML);
+    </script>
+  </body>
+</html>

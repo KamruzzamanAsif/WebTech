@@ -1,0 +1,25 @@
+<html>
+  <head> </head>
+  <body>
+    <p id="p1">Programming</p>
+    <button ondblclick="double_click()">OK</button>
+
+    <a onmouseover="mouse_over()" href="http://iit.du.ac.bd">IIT website</a>
+
+    <script>
+      function sendAlert() {
+        alert("okay");
+        console.log("okay");
+      }
+
+      function mouse_over() {
+        console.lof("mouse hoverd");
+      }
+
+      function double_click() {
+        let para1 = document.getElementById("p1");
+        para1.style.color = "blue";
+      }
+    </script>
+  </body>
+</html>
