@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>This is p1</p>
+    <p>This is p2</p>
+    <p>This is p3</p>
+    <script>
+        let tag = document.getElementsByTagName("body");
+        console.log(tag);
+        tag[0].removeChild(tag[0].firstElementChild);
+        console.log(tag[0].firstElementChild.innerHTML);
+
+        let dList = tag[0].children;
+        console.log(dList);
+    </script>
+  </body>
+</html>
