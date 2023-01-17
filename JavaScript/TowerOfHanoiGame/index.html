@@ -1,219 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <style>
-            body{
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
-            
-            div.game-title{
-                border: 2px solid blue;
-                height: 10%;
-                width: 90%;
-                margin-left: 5%;
-            }
+  <head>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
-            p.game-title-para{
-                height: 100%;
-                width: 100%;
-                text-align: center;
-                color: brown;
-                display: block;
-                font-size: 2em;
-                font-weight: 600;
-                padding-left: 1.5%;
-            }
+      div.game-title {
+        border: 2px solid blue;
+        height: 10%;
+        width: 90%;
+        margin-left: 5%;
+      }
 
-            div.upperDiv {
-                border: 2px solid red;
-                width: 80%;
-                height: 50vh;
-                display: flex;
-                margin: 10px auto;
-            }
+      p.game-title-para {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        color: brown;
+        display: block;
+        font-size: 2em;
+        font-weight: 600;
+        padding-left: 1.5%;
+      }
 
-            div.up-divs {
-                border: 2px solid blueviolet;   
-                width: 10vw;
-                height: 45vh;
-                display: block;
-                margin: 10px auto;
-            }
+      div.upperDiv {
+        border: 2px solid red;
+        width: 80%;
+        height: 50vh;
+        display: flex;
+        margin: 10px auto;
+      }
 
-            div.btns {
-                width: 8vw;
-                height: 35vh;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                /* flex-direction: column-reverse; */
-                margin: 10px auto;
-            }
+      div.up-divs {
+        border: 2px solid blueviolet;
+        width: 10vw;
+        height: 45vh;
+        display: block;
+        margin: 10px auto;
+      }
 
-            div.label {
-                border: 2px solid black;
-                width: 9vw;
-                height: 4vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 0 auto;
-                background-color: rgb(187, 223, 211);
-            }
+      div.btns1,
+      .btns2,
+      .btns3 {
+        width: 8vw;
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* flex-direction: column-reverse; */
+        margin: 10px auto;
+      }
 
-            button.allBtn {
-                width: 6vw;
-                height: 5vh;
-                display: block;
-                margin: 5px auto;
-                font-size: 1.5rem;
-            }
+      div.label {
+        border: 2px solid black;
+        width: 9vw;
+        height: 4vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        background-color: rgb(187, 223, 211);
+      }
 
-            div.midDiv {
-                border: 2px solid rgb(33, 202, 194);
-                width: 80%;
-                height: 15vh;
-                display: flex;
-                margin: 10px auto;
-            }
+      button.allBtn {
+        width: 6vw;
+        height: 5vh;
+        display: block;
+        margin: 5px auto;
+        font-size: 1.5rem;
+      }
 
-            .action-btn {
-                border: 2px solid green;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 50px;
-                height: 15vh;
-                width: 80%;
-                cursor: pointer;
-            }
+      div.midDiv {
+        border: 2px solid rgb(33, 202, 194);
+        width: 80%;
+        height: 15vh;
+        display: flex;
+        margin: 10px auto;
+      }
 
-            div.bottomDiv {
-                border: 2px solid rgb(255, 102, 0);
-                width: 40%;
-                height: 10vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 10px auto;
-            }
+      .action-btn {
+        border: 2px solid green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        height: 15vh;
+        width: 80%;
+        cursor: pointer;
+      }
 
-            button.bottom-btn {
-                height: 5vh;
-                font-size: 1.5rem;
-                cursor: pointer;
-                margin: 2rem;
-                color: whitesmoke;
-            }
-            #sng {
-                background-color: blue;
-            }
+      div.bottomDiv {
+        border: 2px solid rgb(255, 102, 0);
+        width: 40%;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+      }
 
-            #check {
-                background-color: rgb(128, 19, 0);
-            }
-        </style>
-    </head>
+      button.bottom-btn {
+        height: 5vh;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin: 2rem;
+        color: whitesmoke;
+      }
+      #sng {
+        background-color: blue;
+      }
+
+      #check {
+        background-color: rgb(128, 19, 0);
+      }
+    </style>
+  </head>
   <body>
     <div class="game-title">
-        <p class="game-title-para">Welcome to Tower of Hanoi Game</p>
+      <p class="game-title-para">Welcome to Tower of Hanoi Game</p>
     </div>
 
     <div class="upperDiv">
-        <div id="div1" class="up-divs">
-            <div id="div1-btns" class="btns">
-                <button class="allBtn">4</button>
-                <button class="allBtn">2</button>
-                <button class="allBtn">3</button>
-                <button class="allBtn">1</button>
-            </div>
-            <div class="label">1</div>  
+      <div id="div1" class="up-divs">
+        <div class="btns1">
+          <button class="allBtn">4</button>
+          <button class="allBtn">2</button>
+          <button class="allBtn">3</button>
+          <button class="allBtn">1</button>
         </div>
+        <div class="label">1</div>
+      </div>
 
-        <div id="div2" class="up-divs">
-            <div id="div2-btns" class="btns"></div>
-            <div class="label">2</div>
-        </div>
+      <div id="div2" class="up-divs">
+        <div class="btns2"></div>
+        <div class="label">2</div>
+      </div>
 
-        <div id="div3" class="up-divs">
-            <div id="div3-btns" class="btns"></div>
-            <div class="label">3</div>
-        </div>
+      <div id="div3" class="up-divs">
+        <div class="btns3"></div>
+        <div class="label">3</div>
+      </div>
     </div>
 
-
     <div class="midDiv">
-        <button id="1->2" class="action-btn" onclick="swapper(1,2)">1->2</button>
-        <button id="2->3" class="action-btn" onclick="swapper(2,3)">2->3</button>
-        <button id="3->1" class="action-btn" onclick="swapper(3,1)">3->1</button>
+      <button id="1->2" class="action-btn" onclick="swapper('.btns1','.btns2')">
+        1->2
+      </button>
+      <button id="2->3" class="action-btn" onclick="swapper('.btns2','.btns3')">
+        2->3
+      </button>
+      <button id="3->1" class="action-btn" onclick="swapper('.btns3','.btns1')">
+        3->1
+      </button>
 
-        <button id="3->2" class="action-btn" onclick="swapper(3,2)">3->2</button>
-        <button id="2->1" class="action-btn" onclick="swapper(2,1)">2->1</button>
-        <button id="1->3" class="action-btn" onclick="swapper(1,3)">1->3</button>
+      <button id="3->2" class="action-btn" onclick="swapper('.btns3','.btns2')">
+        3->2
+      </button>
+      <button id="2->1" class="action-btn" onclick="swapper('.btns2','.btns1')">
+        2->1
+      </button>
+      <button id="1->3" class="action-btn" onclick="swapper('.btns1','.btns3')">
+        1->3
+      </button>
     </div>
 
     <div class="bottomDiv">
-        <button id="check" class="bottom-btn" onclick="checkValues()">Check Now</button>
-        <button id="sng" class="bottom-btn" onclick="setNewIndexes()">Play Again</button>
+      <button id="check" class="bottom-btn" onclick="check()">Check Now</button>
+      <button id="sng" class="bottom-btn" onclick="setNewIndexes()">
+        Play Again
+      </button>
     </div>
 
-
     <script>
-        function swapper(from, to){
-            // let from_div = document.getElementById(from);
-            // let to_div = document.getElementById(to);
-            // let btn = from_div.lastChild;
-            // to_div.appendChild(btn);
-            // from_div.removeChild(btn);
+      function swapper(from, to) {
+        let from_div = document.querySelectorAll(from);
+        let btns = from_div[0].children;
+        let to_div = document.querySelectorAll(to);
+        to_div[0].insertBefore(btns[0], to_div[0].childNodes[0]);
+      }
 
-            let buttons = document.querySelectorAll(".btns");
-            let btnChild = buttons[from - 1].children;     // 1
+      var numbers = [1, 2, 3, 4];
+      function setNewIndexes() {
+        numbers = numbers.sort(() => Math.random() - 0.3);
+        let btns = document.querySelectorAll(".allBtn");
+        for (let i = 0; i < btns.length; i++) {
+          btns[i].innerHTML = numbers[i];
+        }
+        // now move all the buttons to div-1
+        let buttons = document.querySelectorAll(".btns1")[0];
+        for (let i = 0; i < 4; i++) {
+          buttons.appendChild(btns[i]);
+        }
+      }
 
-            let div = document.querySelectorAll(".btns")[to - 1];    // 2
-
-            div.insertBefore(btnChild[0], div.childNodes[0]);
+      function check() {
+        let numbers = [];
+        for (let i = 1; i <= 3; i++) {
+          let btns = document.querySelectorAll(".btns" + i.toString())[0];
+          let btn_childrens = btns.children;
+          if (btn_childrens.length == 4) {
+            for (let j = 0; j < 4; j++) {
+              numbers.push(parseInt(btn_childrens[j].innerHTML));
+            }
+          }
         }
 
-        var numbers = [1, 2, 3, 4];
-        function setNewIndexes() {
-            numbers = numbers.sort(() => Math.random() - 0.3);
-            let btns = document.querySelectorAll(".allBtn");
-            for (let i = 0; i < btns.length; i++) {
-                btns[i].innerHTML = numbers[i];
-            }
-
-            let buttons = document.querySelectorAll(".btns")[0];
-            for (let i = 0; i < 4; i++) {
-                buttons.appendChild(btns[i]);
-            }
+        let win_numbers = [1, 2, 3, 4];
+        if (JSON.stringify(numbers) == JSON.stringify(win_numbers)) {
+          alert("You Win!");
+        } else {
+          alert("You lose!");
         }
-
-        function checkValues() {
-            let newNum = [];
-            let buttons = document.querySelectorAll(".btns");
-            for (let i = 0; i < buttons.length; i++) {
-                let btnChild = buttons[i].children;
-
-                if (btnChild.length == 4) {
-
-                    for (let j = 0; j < btnChild.length; j++) {
-                        console.log(btnChild[j].innerHTML);
-                        newNum.push(parseInt(btnChild[j].innerHTML));
-                    }
-                    console.log(newNum);
-                    if (JSON.stringify(numbers) == JSON.stringify(newNum)) {
-                        alert("You Won");
-                    } else {
-                        alert("You Lost");
-                    }
-                    break;
-                }
-            }
-
-        }
+      }
     </script>
   </body>
 </html>
