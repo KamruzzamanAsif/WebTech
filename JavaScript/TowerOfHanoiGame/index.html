@@ -7,10 +7,11 @@
         height: 100%;
         margin: 0;
         padding: 0;
-        background-image: url("tower-hanoi.jpg");
+        background-image: url("white-chinese-background.jpeg");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
+        background-position: center;
       }
 
       div.game-title {
@@ -45,6 +46,7 @@
         height: 45vh;
         display: block;
         margin: 10px auto;
+        /* background-color: rgb(241, 193, 137); */
       }
 
       div.btns1,
@@ -184,7 +186,23 @@
         let from_div = document.querySelectorAll(from);
         let btns = from_div[0].children;
         let to_div = document.querySelectorAll(to);
-        to_div[0].insertBefore(btns[0], to_div[0].childNodes[0]);
+
+        let b1 = btns[0].innerHTML;
+        // console.log(b1);
+        let btns2 = to_div[0].children;
+        if(btns2.length != 0){
+            let b2 = btns2[0].innerHTML;
+            // console.log(b2);
+            if(parseInt(b2) > parseFloat(b1)){
+                to_div[0].insertBefore(btns[0], to_div[0].childNodes[0]);
+            }
+            else{
+                alert("You can't put bigger disk on smaller disks");    
+            }
+        }
+        else{
+            to_div[0].insertBefore(btns[0], to_div[0].childNodes[0]);
+        }
       }
 
       var numbers = [1, 2, 3, 4];
@@ -219,7 +237,12 @@
           ];
         }
 
-        return array;
+        let win_numbers = [1, 2, 3, 4];
+        if (JSON.stringify(array) == JSON.stringify(win_numbers)) {
+            return shuffle(array);
+        } else {
+            return array;
+        }
       }
 
       function check() {
