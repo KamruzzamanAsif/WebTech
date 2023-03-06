@@ -1,19 +1,30 @@
 <?php
-	$nameErr = $emailErr = "";
+	$nameErr = $emailErr = $imgErr = "";
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$fname = test_input($_POST['first-name']);
 		$lname = test_input($_POST['last-name']);
 		$name = $fname. ' '. $lname;
 		if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
-			$nameErr = "Only letters and white space allowed";
+			$nameErr = "* Only letters and white space allowed";
 		}
+
 		$email = test_input($_POST['email']);
 		// check if e-mail address is well-formed
 		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-			$emailErr = "Invalid email format";
+			$emailErr = "* Invalid email format";
 		}
+
 		$address = test_input($_POST['address']);
+
 		$imageName = $_FILES['image']['name'];
+		$extension = substr($imageName,strlen($imageName)-4,strlen($imageName));
+		// allowed extensions
+		$allowed_extensions = array(".jpg","jpeg",".png",".gif", ".tif", "tiff", ".bmp", "jfif");
+		// Validation for allowed extensions .in_array() function searches an array for a specific value.
+		if(!in_array($extension,$allowed_extensions))
+		{
+			$imgErr = "* Invalid format. Only jpg / jpeg/ png /gif /tif /tiff /bmp /jfif format allowed";
+		}
 		$tmpName = $_FILES['image']['tmp_name'];
 		$uploadLoc = '../img/'.$imageName;
 
@@ -84,13 +95,14 @@
 		<table>
 			<tr>
 				<th>Name:</th>
-				<td><?php echo $name; ?> <span class="error"> <?php echo '*'.' '.$nameErr;?></span></td>
+				<td><?php echo $name; ?> <span class="error"> <?php echo $nameErr;?></span></td>
 
-                <td rowspan="3"><img src="../img/<?php echo $imageName; ?>" alt="image" width="100%" height="100%" style='border-radius: 50%; width: 10rem; min-height: 10rem;'></td>
+                <td rowspan="3"><img src="../img/<?php echo $imageName; ?>" alt="image" width="100%" height="100%" style='border-radius: 50%; width: 10rem; min-height: 10rem;'>
+					<span class="error"> <?php echo $imgErr;?></span> </td>
 			</tr>
 			<tr>
 				<th>Email:</th>
-				<td><?php echo $email; ?> <span class="error"> <?php echo '*'.' '.$emailErr;?></td>
+				<td><?php echo $email; ?> <span class="error"> <?php echo $emailErr;?></td>
 			</tr>
 			<tr>
 				<th>Address:</th>
