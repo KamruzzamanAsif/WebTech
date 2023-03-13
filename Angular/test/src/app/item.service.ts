@@ -19,4 +19,8 @@ export class ItemService {
   getItems(): Item[] {
     return this.items;
   }
+
+  setItems(index: number){
+    this.items[index].quantity = this.items[index].quantity - 1;
+  }
 }

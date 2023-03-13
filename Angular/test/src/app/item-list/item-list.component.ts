@@ -20,4 +20,15 @@ export class ItemListComponent implements OnInit{
     console.log(this.myItems);
   }
 
+  requestItem(item_name: String): void{
+    alert("item: " + item_name + " requested");
+  }
+
+  buyItem(item_index: number): void{
+    let quantity, name: any = 0;
+    quantity = this.myItems[item_index].quantity - 1;
+    name = this.myItems[item_index].name;
+    alert("one item of "+ name + " is bought" + "\nnow available "+quantity);
+    this.itemService.setItems(item_index);
+  }
 }
