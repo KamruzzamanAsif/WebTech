@@ -15,6 +15,8 @@ export class ItemService {
     {id: 3, name: 'OPPO', price: 300, quantity: 0}
   ];
 
+  itemToBeUpdated: Item = new Item();
+
   // function to return item objects
   getItems(): Item[] {
     return this.items;
@@ -22,5 +24,15 @@ export class ItemService {
 
   setItems(index: number){
     this.items[index].quantity = this.items[index].quantity - 1;
+  }
+
+  setItemToBeUpdated(index: number): void {
+    let item = this.items[index];
+    if(item != null){
+      this.itemToBeUpdated = item;
+    }
+  }
+  getItemToBeUpdated(): Item {
+    return this.itemToBeUpdated;
   }
 }

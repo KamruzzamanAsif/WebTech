@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 import { Item } from '../item';
 import { ItemService } from '../item.service';
+
 
 @Component({
   selector: 'app-item-list',
@@ -9,7 +11,7 @@ import { ItemService } from '../item.service';
 })
 export class ItemListComponent implements OnInit{
   // dependency injection > must be in constructor
-  constructor(private itemService: ItemService){}
+  constructor(private itemService: ItemService, private router: Router){}
 
   myItems: Item[] = [];
 
@@ -30,5 +32,10 @@ export class ItemListComponent implements OnInit{
     name = this.myItems[item_index].name;
     alert("one item of "+ name + " is bought" + "\nnow available "+quantity);
     this.itemService.setItems(item_index);
+  }
+
+  updateItem(item_index: number): void{
+    this.itemService.setItemToBeUpdated(item_index);
+    this.router.navigate(["update"]);
   }
 }
