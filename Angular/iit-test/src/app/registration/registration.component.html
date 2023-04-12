@@ -1,0 +1,28 @@
+<form action="" class="was-validated needs-validation">
+  <div class="mb-3 mt-3">
+    <label for="id" class="form-label">ID:</label>
+    <input type="number" class="form-control" id="id" placeholder="Enter id" name="id" [(ngModel)]='myUser.id' required>
+  </div>
+
+  <div class="mb-3">
+    <label for="name" class="form-label">Name:</label>
+    <input type="string" class="form-control" id="name" placeholder="Enter name" name="name" [(ngModel)]='myUser.name' required>
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email:</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+  </div>
+
+  <input type="file" (change)="onFileSelected($event)" id="userImage" name="userImage" required>
+
+  <div class="form-check mb-3">
+    <label class="form-check-label">
+      <input class="form-check-input" type="checkbox" name="remember"> Remember me
+    </label>
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="addUser()">Register</button>
+  <span *ngIf="formNotValidate">Form Not Validated!</span>
+</form> 
+
