@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UsersComponent } from './users/users.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule } from '@angular/forms';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     NavbarComponent,
     UsersComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

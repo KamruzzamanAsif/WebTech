@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 import {User} from '../User'
 import {UserService} from '../user.service'
 import { DomSanitizer } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-users',
@@ -9,7 +11,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit{
-  constructor(private userService: UserService, private domSanitizer: DomSanitizer){}
+  constructor(private userService: UserService, private router: Router){}
 
   users: User[] = [];
 
@@ -19,6 +21,11 @@ export class UsersComponent implements OnInit{
 
   getUsers(): User[]{
     return this.users;
+  }
+
+  updateUser(index: number): void{
+    this.userService.setUserToBeUpdated(index);
+    this.router.navigate(["userUpdate"]);
   }
 
   // sanitizeImageUrl(url: string) {

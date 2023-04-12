@@ -1,0 +1,43 @@
+.form-group{
+    max-width: 60%;
+    justify-content: center;
+  }
+  
+  .my-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    }
+  
+    .my-form .form-group {
+    margin-bottom: 20px;
+    }
+  
+    .my-form .form-control {
+    border-radius: 5px;
+    }
+  
+    .my-btn {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+    }
+  
+    .my-btn:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+    }
+  
+    .my-invalid-feedback {
+    font-size: 14px;
+    color: red;
+    }
+  
+    @media (max-width: 576px) {
+    .my-form {
+    font-size: 14px;
+    }
+    }
+  

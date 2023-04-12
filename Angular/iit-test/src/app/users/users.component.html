@@ -1,9 +1,7 @@
-<li *ngFor="let user of users">
+<li *ngFor="let user of users; let i=index">
   <hr>
   <span>ID: {{user.id}}</span> <br>
   <span>Name: {{user.name}}</span> <br>
-  <span>ImageLink: {{user.imageLink}}</span>
-  <!-- <div>
-    <img src="sanitizeImageUrl(home/asif/Downloads/uncle.png)" alt="">
-  </div> -->
-</li> 
+  <span>ImageLink: {{user.imageLink}}</span> <br>
+  <span><button class="btn" (click)="updateUser(i)">Update</button></span>
+</li>

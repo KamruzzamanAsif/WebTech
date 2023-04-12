@@ -20,6 +20,8 @@ export class UserService {
     { id: 20, name: 'Tornado' , imageLink: ''}
   ];
 
+  userToBeUpdated: User = new User();
+
   getUsers(): User[]{
     return this.users;
   }
@@ -28,4 +30,10 @@ export class UserService {
     this.users.push(user);
   }
   
+  setUserToBeUpdated(index: number): void{
+    this.userToBeUpdated = this.users[index];
+  }
+  getUserToBeUpdated(): User{
+    return this.userToBeUpdated;
+  }
 }
