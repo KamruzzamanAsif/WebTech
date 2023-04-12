@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../User'
 import {UserService} from '../user.service'
-
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-users',
@@ -9,7 +9,7 @@ import {UserService} from '../user.service'
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit{
-  constructor(private userService: UserService){}
+  constructor(private userService: UserService, private domSanitizer: DomSanitizer){}
 
   users: User[] = [];
 
@@ -20,4 +20,9 @@ export class UsersComponent implements OnInit{
   getUsers(): User[]{
     return this.users;
   }
+
+  // sanitizeImageUrl(url: string) {
+  //   console.log("Sanitization is on...")
+  //   return this.domSanitizer.bypassSecurityTrustUrl(url);
+  // }
 }
