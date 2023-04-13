@@ -28,6 +28,10 @@ export class UsersComponent implements OnInit{
     this.router.navigate(["userUpdate"]);
   }
 
+  deleteUser(index: number): void{
+    this.userService.deleteUser(index);
+  }
+
   // sanitizeImageUrl(url: string) {
   //   console.log("Sanitization is on...")
   //   return this.domSanitizer.bypassSecurityTrustUrl(url);

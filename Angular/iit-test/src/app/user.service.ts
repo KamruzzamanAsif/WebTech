@@ -29,6 +29,10 @@ export class UserService {
   addUser(user: User): void{
     this.users.push(user);
   }
+
+  deleteUser(index: number): void{
+    this.users.splice(index, 1);
+  }
   
   setUserToBeUpdated(index: number): void{
     this.userToBeUpdated = this.users[index];
