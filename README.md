@@ -39,6 +39,27 @@ PHP is a server-side scripting language used for creating dynamic web pages. The
 
 To run the PHP practice codes, you will need to set up a local web server. You can use XAMPP or WAMP for this purpose.
 
+
+## JavaScript
+
+This is a JavaScript project that includes various practice codes and examples.
+
+## Installation
+
+To use this project, you'll need to have Node.js installed. You can download it from the official website: https://nodejs.org/
+
+Once you have Node.js installed, clone this repository to your local machine and navigate to the project directory. Then, run the following command to install the dependencies:
+
+`npm install`
+
+## Usage
+
+This project includes several JavaScript files with different examples and practice codes. To run any of these files, use the following command:
+
+`node filename.js`
+Replace `filename.js` with the name of the JavaScript file you want to run.
+
+
 ## Angular
 
 Angular is a popular web application framework used for creating single-page applications. The practice codes included in this project cover Angular components, templates, services, routing, and more.
